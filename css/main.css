@@ -1,0 +1,261 @@
+/* Copyright 2013 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file. */
+
+html,body{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.icon {
+  -webkit-user-select: none;
+  display: inline-block;
+}
+
+.icon-offline {
+  content: -webkit-image-set(
+      url(default_100_percent/offline/100-error-offline.png) 1x,
+      url(default_200_percent/offline/200-error-offline.png) 2x);
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Offline page */
+.offline .interstitial-wrapper {
+  color: #2b2b2b;
+  font-size: 1em;
+  line-height: 1.55;
+  margin: 0 auto;
+  max-width: 600px;
+  padding-top: 100px;
+  width: 100%;
+}
+
+.offline .runner-container {
+  height: 150px;
+  max-width: 600px;
+  overflow: hidden;
+  position: absolute;
+  top: 35px;
+  width: 44px;
+}
+
+.offline .runner-canvas {
+  height: 100%
+  width: 100%;
+  max-width: 600px;
+  opacity: 1;
+  overflow: ;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  animation: mymove 1s infinite;
+
+
+}
+
+.offline .controller {
+  background: rgba(247,247,247, .1);
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+#offline-resources {
+  display: none;
+}
+
+@media (max-width: 420px) {
+  .suggested-left > #control-buttons,
+  .suggested-right > #control-buttons {
+    float: none;
+  }
+
+  .snackbar {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+@media (max-height: 350px) {
+  h1 {
+    margin: 0 0 15px;
+  }
+
+  .icon-offline {
+    margin: 0 0 10px;
+  }
+
+  .interstitial-wrapper {
+    margin-top: 5%;
+  }
+
+  .nav-wrapper {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 736px) and (orientation: landscape) {
+  .offline .interstitial-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 420px) and (max-width: 736px) and
+       (min-height: 240px) and (max-height: 420px) and
+       (orientation:landscape) {
+  .interstitial-wrapper {
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-height: 240px) and (orientation: landscape) {
+  .offline .interstitial-wrapper {
+    margin-bottom: 90px;
+  }
+
+  .icon-offline {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-height: 320px) and (orientation: landscape) {
+  .icon-offline {
+    margin-bottom: 0;
+  }
+
+  .offline .runner-container {
+    top: 10px;
+  }
+}
+
+@media (max-width: 240px) {
+  button {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .interstitial-wrapper {
+    overflow: inherit;
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 120px) {
+  button {
+    width: auto;
+  }
+}
+@keyframes mymove {
+    2.1% { transform: rotate(180deg);}
+    2%{      transform: skew(55deg,-5deg);}
+    3%{     background-color: green;}
+    4% {background-color: '#42f4ee'}
+    5% {background-color: '#4277f4'}
+    6% {background-color: '#6c6b6d'; }
+    7% {background-color: '#d11437'}
+    8% {background-color: '#af6775'}
+    9% {background-color: '#133806'}
+    10% {background-color: black}
+    /**/
+    20% {background-color: blue}
+    21% {background-color: red}
+    22% {background-color: yellow}
+    23% {background-color: orange}
+    24% {background-color: '#42f4ee'}
+    25% {background-color: '#4277f4'}
+    26% {background-color: '#6c6b6d'}
+    27% {background-color: '#d11437'}
+    28% {background-color: '#af6775'}
+    29% {background-color: '#133806'}
+    30% {background-color: green}
+    /**/
+    31% {background-color: red}
+    32% {background-color: yellow}
+    33% {background-color: orange}
+    34% {background-color: '#42f4ee'}
+    35% {background-color: '#4277f4'}
+    36% {background-color: '#6c6b6d'}
+    37% {background-color: '#d11437'}
+    38% {background-color: '#af6775'}
+    39% {background-color: '#133806'}
+    40% {background-color: '#9a25b2'}
+    /**/
+    41% {background-color: red}
+    42% {background-color: yellow}
+    43% {background-color: orange}
+    44% {background-color: '#42f4ee'}
+    45% {background-color: '#4277f4'}
+    46% {background-color: '#6c6b6d'}
+    47% {background-color: '#d11437'}
+    48% {background-color: '#af6775'}
+    49% {background-color: '#133806'}
+    50% {background-color: '#9a25b2';}
+    /**/
+    51% {background-color: red}
+    52% {background-color: yellow}
+    53% {background-color: orange}
+    54% {background-color: '#42f4ee'}
+    55% {background-color: '#4277f4'}
+    56% {background-color: '#6c6b6d'}
+    57% {background-color: '#d11437'}
+    58% {background-color: '#af6775'}
+    59% {background-color: '#133806'}
+    60% {background-color: '#9a25b2'}
+    /**/
+    61% {background-color: red}
+    62% {background-color: yellow}
+    63% {background-color: orange}
+    64% {background-color: '#42f4ee'}
+    65% {background-color: '#4277f4'}
+    66% {background-color: '#6c6b6d'}
+    67% {background-color: '#d11437'}
+    68% {background-color: '#af6775'}
+    69% {background-color: '#133806'}
+    70% {background-color: '#9a25b2'}
+    /**/
+    71% {background-color: red}
+    72% {background-color: yellow}
+    73% {background-color: orange}
+    74% {background-color: '#42f4ee'}
+    75% {background-color: '#4277f4'}
+    76% {background-color: '#6c6b6d'}
+    77% {background-color: '#d11437'}
+    78% {background-color: '#af6775'}
+    79% {background-color: '#133806'}
+    80% {background-color: '#9a25b2'}
+    /**/
+    81% {background-color: red}
+    82% {background-color: yellow}
+    83% {background-color: orange}
+    84% {background-color: '#42f4ee'}
+    85% {background-color: '#4277f4'}
+    86% {background-color: '#6c6b6d'}
+    87% {background-color: '#d11437'}
+    88% {background-color: '#af6775'}
+    89% {background-color: '#133806'}
+    90% {background-color: '#9a25b2'}
+    /**/
+    91% {background-color: red}
+    92% {background-color: yellow}
+    93% {background-color: orange}
+    94% {background-color: '#42f4ee'}
+    95% {background-color: '#4277f4'}
+    96% {background-color: '#6c6b6d'}
+    97% {background-color: '#d11437'}
+    98% {background-color: '#af6775'}
+    99% {background-color: '#133806'}
+    100% {background-color: '#9a25b2'}
+
+}
